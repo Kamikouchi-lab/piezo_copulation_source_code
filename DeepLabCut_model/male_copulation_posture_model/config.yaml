@@ -1,0 +1,211 @@
+    # Project definitions (do not edit)
+Task: piezo_cop_angle_analysis
+scorer: yama
+date: Jul27
+multianimalproject: false
+identity:
+
+    # Project path (change when moving around)
+project_path: C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\C60_210701_cop_CS-H_isolatedMvirginF_1stPC_2.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\C64_210701_cop_CS-H_isolatedMvirginF_2ndPC_1.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\C68_210702_cop_CS-H_isolatedMvirginF_1stPC_1.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\C72_210702_cop_CS-H_isolatedMvirginF_1stPC_6.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\C76_210702_cop_CS-H_isolatedMvirginF_2ndPC_6.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\C80_210707_cop_CS-H_isolatedMvirginF_1stPC_1.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\C84_210707_cop_CS-H_isolatedMvirginF_2ndPC_2.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\C88_210708_cop_CS-H_isolatedMvirginF_1stPC_3.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\C92_210708_cop_CS-H_isolatedMvirginF_2ndPC_4.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\C96_210709_cop_CS-H_isolatedMvirginF_1stPC_5.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\M61_210118_cop_piezoKO_CS-H_isolatedMvirginF_5.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\M66_210122_cop_piezoKO_CS-H_isolatedMvirginF_5.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\M70_210222_cop_piezoKO_CS-H_isolatedMvirginF_1.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\M74_210223_cop_piezoKO_CS-H_isolatedMvirginF_2.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\M78_210223_cop_piezoKO_CS-H_isolatedMvirginF_6.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\M82_210226_cop_piezoKO_CS-H_isolatedMvirginF_4.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\M86_210302_cop_piezoKO_CS-H_isolatedMvirginF_5.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\M90_210322_cop_piezoKO_CS-H_isolatedMvirginF_2ndPC_1.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\M94_210322_cop_piezoKO_CS-H_isolatedMvirginF_2ndPC_5.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\M98_210323_cop_piezoKO_CS-H_isolatedMvirginF_1stPC_3.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\T60_210129_cop_piezoKOhetero_CS-H_isolatedMvirginF_1.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\T64_210129_cop_piezoKOhetero_CS-H_isolatedMvirginF_6.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\T68_210201_cop_piezoKOhetero_CS-H_isolatedMvirginF_6.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\T72_210208_cop_piezoKOhetero_CS-H_isolatedMvirginF_4.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\T76_210209_cop_piezoKOhetero_CS-H_isolatedMvirginF_4.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\T80_210209_cop_piezoKOhetero_CS-H_isolatedMvirginF_8.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\T84_210216_cop_piezoKOhetero_CS-H_isolatedMvirginF_2.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\T88_210219_cop_piezoKOhetero_CS-H_isolatedMvirginF_2.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\T92_210630_cop_piezoKOhetero_CS-H_isolatedMvirginF_1stPC_6.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\T96_210714_cop_piezoKOhetero_CS-H_isolatedMvirginF_1stPC_2.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220524_CantonS_C1_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220524_hetero_T1_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220524_homo_M1_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220524_homo_M2_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220530_hetero_T3_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220531_CantonS_C6_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220531_hetero_T6_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220531_homo_M7_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220601_CantonS_C10_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220601_hetero_T11_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220607_hetero_T13_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220607_homo_M13_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220608_homo_M15_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220609_hetero_T15_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220610_CantonS_C16_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220610_homo_M18_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220615_CantonS_C19_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220615_CantonS_C20_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220616_hetero_T21_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220616_homo_M22_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220617_CantonS_C24_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220617_homo_M25_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220617_homo_M26_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220620_CantonS_C28_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220620_hetero_T27_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220620_hetero_T29_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220621_homo_M30_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220622_CantonS_C33_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220622_hetero_T33_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220622_homo_M34_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220624_CantonS_C37_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220624_homo_M39_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220627_CantonS_C42_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220627_hetero_T40_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220706_CantonS_C46_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220706_hetero_T44_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220706_homo_M44_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220707_hetero_T49_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220708_CantonS_C50_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\piezo_data_analysis\piezo_cop_angle_2022-07-27\videos\220708_homo_M50_piezo_copulation.mp4
+  : crop: 0, 640, 0, 480
+bodyparts:
+- M_r
+- M_l
+- F_r
+- F_l
+- M_reye
+- M_leye
+- F_reye
+- F_leye
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 20
+    # Plotting configuration
+skeleton:
+- - M_r
+  - M_l
+- - F_r
+  - F_reye
+- - F_reye
+  - F_leye
+- - M_reye
+  - M_leye
+- - M_l
+  - M_leye
+- - F_r
+  - F_l
+- - M_r
+  - M_reye
+- - F_l
+  - F_leye
+skeleton_color: black
+pcutoff: 0.9
+dotsize: 12
+alphavalue: 0.7
+colormap: rainbow
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
