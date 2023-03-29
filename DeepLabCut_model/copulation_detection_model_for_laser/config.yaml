@@ -1,0 +1,112 @@
+    # Project definitions (do not edit)
+Task: det_cop_opto
+scorer: yama
+date: Oct22
+multianimalproject: false
+identity:
+
+    # Project path (change when moving around)
+project_path: C:\Users\nokai\Desktop\Yamanouchi\det_cop_opto-yama-2021-11-11
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  C:\Users\nokai\Desktop\Yamanouchi\det_cop_opto-yama-2021-11-11\videos\1_211015_CS-H_3.mp4:
+    crop: 0, 720, 0, 480
+  C:\Users\nokai\Desktop\Yamanouchi\det_cop_opto-yama-2021-11-11\videos\2_211019_CS-H_2.mp4:
+    crop: 0, 720, 0, 480
+  C:\Users\nokai\Desktop\Yamanouchi\det_cop_opto-yama-2021-11-11\videos\3_211019_CS-H_3.mp4:
+    crop: 0, 720, 0, 480
+  C:\Users\nokai\Desktop\Yamanouchi\det_cop_opto-yama-2021-11-11\videos\4_211019_CS-H_4.mp4:
+    crop: 0, 720, 0, 480
+  C:\Users\nokai\Desktop\Yamanouchi\det_cop_opto-yama-2021-11-11\videos\5_211021_CS-H_1.mp4:
+    crop: 0, 720, 0, 480
+  C:\Users\nokai\Desktop\Yamanouchi\det_cop_opto-yama-2021-11-11\detect_cop_dataset_videos\6_add_211111T12_16_23.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\Yamanouchi\det_cop_opto-yama-2021-11-11\detect_cop_dataset_videos\7_add_211111T14_29_45.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\Yamanouchi\det_cop_opto-yama-2021-11-11\detect_cop_dataset_videos\8_add_211112T15_42_15.mp4:
+    crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\Yamanouchi\det_cop_opto-yama-2021-11-11\detect_cop_dataset_videos\9_cop_video2022-01-19T16_29_09.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\Yamanouchi\det_cop_opto-yama-2021-11-11\detect_cop_dataset_videos\10_square_cham_hold_cop0002
+    22-01-19 11-59-32.mp4
+  : crop: 0, 640, 0, 480
+  ? C:\Users\nokai\Desktop\Yamanouchi\det_cop_opto-yama-2021-11-11\detect_cop_dataset_videos\11_square_cham_hold_cop0003
+    22-01-19 12-53-31.mp4
+  : crop: 0, 640, 0, 480
+bodyparts:
+- F_reye
+- F_leye
+- F_rch
+- F_lch
+- F_cch
+- F_ge
+- M_reye
+- M_leye
+- M_rch
+- M_lch
+- M_cch
+- M_ge
+start: 0
+stop: 1
+numframes2pick: 20
+
+    # Plotting configuration
+skeleton:
+- - F_reye
+  - F_leye
+- - F_leye
+  - F_lch
+- - M_cch
+  - M_ge
+- - M_reye
+  - M_leye
+- - M_reye
+  - M_rch
+- - F_cch
+  - F_ge
+- - F_reye
+  - F_rch
+- - M_rch
+  - M_cch
+- - M_rch
+  - M_lch
+- - M_lch
+  - M_cch
+- - F_rch
+  - F_lch
+- - F_lch
+  - F_cch
+- - F_rch
+  - F_cch
+- - M_leye
+  - M_lch
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 8
+alphavalue: 0.7
+colormap: rainbow
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+croppedtraining: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true

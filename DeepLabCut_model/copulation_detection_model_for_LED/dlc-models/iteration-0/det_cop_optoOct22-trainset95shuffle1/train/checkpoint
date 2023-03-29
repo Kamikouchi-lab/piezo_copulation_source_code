@@ -1,0 +1,6 @@
+model_checkpoint_path: "C:\\Users\\nokai\\Desktop\\Yamanouchi\\det_cop_opto-yama-2021-11-11\\dlc-models\\iteration-0\\det_cop_optoOct22-trainset95shuffle1\\train\\snapshot-500000"
+all_model_checkpoint_paths: "C:\\Users\\nokai\\Desktop\\Yamanouchi\\det_cop_opto-yama-2021-11-11\\dlc-models\\iteration-0\\det_cop_optoOct22-trainset95shuffle1\\train\\snapshot-480000"
+all_model_checkpoint_paths: "C:\\Users\\nokai\\Desktop\\Yamanouchi\\det_cop_opto-yama-2021-11-11\\dlc-models\\iteration-0\\det_cop_optoOct22-trainset95shuffle1\\train\\snapshot-485000"
+all_model_checkpoint_paths: "C:\\Users\\nokai\\Desktop\\Yamanouchi\\det_cop_opto-yama-2021-11-11\\dlc-models\\iteration-0\\det_cop_optoOct22-trainset95shuffle1\\train\\snapshot-490000"
+all_model_checkpoint_paths: "C:\\Users\\nokai\\Desktop\\Yamanouchi\\det_cop_opto-yama-2021-11-11\\dlc-models\\iteration-0\\det_cop_optoOct22-trainset95shuffle1\\train\\snapshot-495000"
+all_model_checkpoint_paths: "C:\\Users\\nokai\\Desktop\\Yamanouchi\\det_cop_opto-yama-2021-11-11\\dlc-models\\iteration-0\\det_cop_optoOct22-trainset95shuffle1\\train\\snapshot-500000"
