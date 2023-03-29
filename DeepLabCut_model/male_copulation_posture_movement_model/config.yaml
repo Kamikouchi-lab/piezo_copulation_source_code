@@ -1,0 +1,118 @@
+    # Project definitions (do not edit)
+Task: laser_opt_piezo
+scorer: yama
+date: Aug3
+multianimalproject: false
+identity:
+
+    # Project path (change when moving around)
+project_path: C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\1_ATR_cop_video2022-01-28T17_50_07.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\1_EtOH_cop_video2022-01-21T14_32_48.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\2_ATR_cop_video2022-02-01T12_46_17.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\2_EtOH_cop_video2022-03-03T11_10_43.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\3_ATR_cop_video2022-02-01T14_49_03.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\3_EtOH_cop_video2022-03-09T11_15_38.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\4_ATR_cop_video2022-02-02T17_56_14.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\4_EtOH_cop_video2022-04-12T12_51_21.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\5_ATR_cop_video2022-02-03T14_38_43.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\5_EtOH_cop_video2022-04-12T15_01_59.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\6_ATR_cop_video2022-02-04T15_36_12.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\6_EtOH_cop_video2022-06-22T15_11_33.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\7_ATR_cop_video2022-03-01T11_24_34.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\7_EtOH_cop_video2022-06-23T15_30_06.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\8_ATR_cop_video2022-04-12T13_58_21.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\8_EtOH_web_camera2022-06-27T15_24_24.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\9_ATR_cop_video2022-04-12T17_31_42.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\9_EtOH_cop_video2022-07-08T17_17_55.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\10_ATR_cop_video2022-04-13T11_07_46.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\11_ATR_cop_video2022-04-13T12_14_27.mp4:
+    crop: 0, 640, 0, 480
+  C:\Users\nokai\Desktop\piezo_data_analysis\laser_opt_piezo-yama-2022-08-03\videos\12_ATR_cop_video2022-07-06T12_50_43.mp4:
+    crop: 0, 640, 0, 480
+bodyparts:
+- F_reye
+- E_leye
+- F_rche
+- F_lche
+- M_head
+- M_reye
+- M_leye
+- M_rche
+- M_lche
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 20
+
+    # Plotting configuration
+skeleton:
+- - F_reye
+  - F_leye
+- - F_leye
+  - F_lche
+- - F_lche
+  - F_rche
+- - F_rche
+  - F_reye
+- - M_reye
+  - M_head
+- - M_head
+  - M_leye
+- - M_leye
+  - M_lche
+- - M_lche
+  - M_rche
+- - M_rche
+  - M_reye
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 12
+alphavalue: 0.7
+colormap: rainbow
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
