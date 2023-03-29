@@ -1,5 +1,5 @@
-# piezo_copulation_source_code
-"Piezo-mediated mechanosensation contributes to stabilizing copulation posture and reproductive success in Drosophila males"
+# Piezo-mediated mechanosensation contributes to stabilizing copulation posture and reproductive success in Drosophila males
+
 
 ### Figure 2C, D
 
