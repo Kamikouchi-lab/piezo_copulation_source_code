@@ -1,0 +1,28 @@
+all_joints:
+- - 0
+- - 1
+- - 2
+- - 3
+- - 4
+- - 5
+- - 6
+- - 7
+- - 8
+all_joints_names:
+- F_reye
+- E_leye
+- F_rche
+- F_lche
+- M_head
+- M_reye
+- M_leye
+- M_rche
+- M_lche
+dataset: training-datasets\iteration-0\UnaugmentedDataSet_laser_opt_piezoAug3\laser_opt_piezo_yama95shuffle1.mat
+global_scale: 0.8
+init_weights: C:\Users\nokai\anaconda3\envs\DEEPLABCUT\lib\site-packages\deeplabcut\pose_estimation_tensorflow\models\pretrained\resnet_v1_50.ckpt
+location_refinement: true
+locref_stdev: 7.2801
+net_type: resnet_50
+num_joints: 9
+scoremap_dir: test
