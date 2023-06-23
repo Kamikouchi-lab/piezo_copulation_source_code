@@ -2,18 +2,17 @@
 <WorkflowBuilder Version="2.6.1"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:cv="clr-namespace:Bonsai.Vision;assembly=Bonsai.Vision"
-                 xmlns:dlc="clr-namespace:Bonsai.DeepLabCut;assembly=Bonsai.DeepLabCut"
                  xmlns:io="clr-namespace:Bonsai.IO;assembly=Bonsai.System"
+                 xmlns:dlc="clr-namespace:Bonsai.DeepLabCut;assembly=Bonsai.DeepLabCut"
                  xmlns:rx="clr-namespace:Bonsai.Reactive;assembly=Bonsai.Core"
-                 xmlns:p1="clr-namespace:Bonsai.Scripting;assembly=Bonsai.Scripting"
+                 xmlns:scr="clr-namespace:Bonsai.Scripting;assembly=Bonsai.Scripting"
                  xmlns:ard="clr-namespace:Bonsai.Arduino;assembly=Bonsai.Arduino"
-                 xmlns:vid="clr-namespace:Bonsai.Video;assembly=Bonsai.Video"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="cv:CameraCapture">
-          <cv:Index>0</cv:Index>
+          <cv:Index>1</cv:Index>
           <cv:CaptureProperties>
             <cv:CapturePropertyAssignment>
               <cv:Property>Fps</cv:Property>
@@ -23,11 +22,10 @@
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="dlc:DetectPose">
-          <dlc:ModelFileName>exported-models\DLC_det_cop_opto_resnet_50_iteration-0_shuffle-1\snapshot-500000.pb</dlc:ModelFileName>
-          <dlc:PoseConfigFileName>exported-models\DLC_det_cop_opto_resnet_50_iteration-0_shuffle-1\pose_cfg.yaml</dlc:PoseConfigFileName>
-          <dlc:MinConfidence>0.4329897</dlc:MinConfidence>
+        <Combinator xsi:type="dlc:PredictPose">
+          <dlc:MinConfidence xsi:nil="true" />
           <dlc:ScaleFactor xsi:nil="true" />
+          <dlc:ColorConversion>Bgr2Rgb</dlc:ColorConversion>
         </Combinator>
       </Expression>
       <Expression xsi:type="io:CsvWriter">
@@ -66,13 +64,13 @@
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Zip" />
             </Expression>
-            <Expression xsi:type="p1:PythonTransform">
-              <p1:Script>@returns(float)
+            <Expression xsi:type="scr:PythonTransform">
+              <scr:Script>@returns(float)
 def process(value):
   a = value.Item1
   b = value.Item2
   position = (a + b) / 2
-  return position</p1:Script>
+  return position</scr:Script>
             </Expression>
             <Expression xsi:type="MemberSelector">
               <Selector>Position.Y</Selector>
@@ -80,13 +78,13 @@ def process(value):
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Zip" />
             </Expression>
-            <Expression xsi:type="p1:PythonTransform">
-              <p1:Script>@returns(float)
+            <Expression xsi:type="scr:PythonTransform">
+              <scr:Script>@returns(float)
 def process(value):
   a = value.Item1
   b = value.Item2
   position = (a + b) / 2
-  return position</p1:Script>
+  return position</scr:Script>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="dlc:GetBodyPart">
@@ -110,23 +108,23 @@ def process(value):
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Zip" />
             </Expression>
-            <Expression xsi:type="p1:PythonTransform">
-              <p1:Script>@returns(float)
+            <Expression xsi:type="scr:PythonTransform">
+              <scr:Script>@returns(float)
 def process(value):
   a = value.Item1
   b = value.Item2
   position = (a + b) / 2
-  return position</p1:Script>
+  return position</scr:Script>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Zip" />
             </Expression>
             <Expression xsi:type="Subtract" />
-            <Expression xsi:type="p1:PythonTransform">
-              <p1:Script>@returns(float)
+            <Expression xsi:type="scr:PythonTransform">
+              <scr:Script>@returns(float)
 def process(value):
   position = value ** 2
-  return position</p1:Script>
+  return position</scr:Script>
             </Expression>
             <Expression xsi:type="MemberSelector">
               <Selector>Position.Y</Selector>
@@ -134,23 +132,23 @@ def process(value):
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Zip" />
             </Expression>
-            <Expression xsi:type="p1:PythonTransform">
-              <p1:Script>@returns(float)
+            <Expression xsi:type="scr:PythonTransform">
+              <scr:Script>@returns(float)
 def process(value):
   a = value.Item1
   b = value.Item2
   position = (a + b) / 2
-  return position</p1:Script>
+  return position</scr:Script>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Zip" />
             </Expression>
             <Expression xsi:type="Subtract" />
-            <Expression xsi:type="p1:PythonTransform">
-              <p1:Script>@returns(float)
+            <Expression xsi:type="scr:PythonTransform">
+              <scr:Script>@returns(float)
 def process(value):
   position = value ** 2
-  return position</p1:Script>
+  return position</scr:Script>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Zip" />
@@ -164,8 +162,8 @@ def process(value):
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:CombineLatest" />
             </Expression>
-            <Expression xsi:type="p1:PythonTransform">
-              <p1:Script>@returns (int)
+            <Expression xsi:type="scr:PythonTransform">
+              <scr:Script>@returns (int)
 def process(value):
   distance = value.Item1
   threshold = value.Item2
@@ -179,7 +177,7 @@ def process(value):
     inside = False
     judge = 0
     return judge
-</p1:Script>
+</scr:Script>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="dlc:GetBodyPart">
@@ -214,23 +212,23 @@ def process(value):
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Zip" />
             </Expression>
-            <Expression xsi:type="p1:PythonTransform">
-              <p1:Script>@returns(float)
+            <Expression xsi:type="scr:PythonTransform">
+              <scr:Script>@returns(float)
 def process(value):
   a = value.Item1
   b = value.Item2
   position = (a + b) / 2
-  return position</p1:Script>
+  return position</scr:Script>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Zip" />
             </Expression>
             <Expression xsi:type="Subtract" />
-            <Expression xsi:type="p1:PythonTransform">
-              <p1:Script>@returns(float)
+            <Expression xsi:type="scr:PythonTransform">
+              <scr:Script>@returns(float)
 def process(value):
   position = value ** 2
-  return position</p1:Script>
+  return position</scr:Script>
             </Expression>
             <Expression xsi:type="MemberSelector">
               <Selector>Position.Y</Selector>
@@ -238,23 +236,23 @@ def process(value):
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Zip" />
             </Expression>
-            <Expression xsi:type="p1:PythonTransform">
-              <p1:Script>@returns(float)
+            <Expression xsi:type="scr:PythonTransform">
+              <scr:Script>@returns(float)
 def process(value):
   a = value.Item1
   b = value.Item2
   position = (a + b) / 2
-  return position</p1:Script>
+  return position</scr:Script>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Zip" />
             </Expression>
             <Expression xsi:type="Subtract" />
-            <Expression xsi:type="p1:PythonTransform">
-              <p1:Script>@returns(float)
+            <Expression xsi:type="scr:PythonTransform">
+              <scr:Script>@returns(float)
 def process(value):
   position = value ** 2
-  return position</p1:Script>
+  return position</scr:Script>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Zip" />
@@ -268,8 +266,8 @@ def process(value):
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:CombineLatest" />
             </Expression>
-            <Expression xsi:type="p1:PythonTransform">
-              <p1:Script>@returns (int)
+            <Expression xsi:type="scr:PythonTransform">
+              <scr:Script>@returns (int)
 def process(value):
   distance = value.Item1
   threshold = value.Item2
@@ -283,13 +281,13 @@ def process(value):
     inside = False
     judge = 0
     return judge
-</p1:Script>
+</scr:Script>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Zip" />
             </Expression>
-            <Expression xsi:type="p1:PythonTransform">
-              <p1:Script>@returns (bool)
+            <Expression xsi:type="scr:PythonTransform">
+              <scr:Script>@returns (bool)
 def process(value):
   jud1 = value.Item1
   jud2 = value.Item2
@@ -301,7 +299,7 @@ def process(value):
   else:
     kint = False
     return kint
-</p1:Script>
+</scr:Script>
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
           </Nodes>
@@ -423,7 +421,7 @@ def process(value):
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="cv:CameraCapture">
-          <cv:Index>2</cv:Index>
+          <cv:Index>3</cv:Index>
           <cv:CaptureProperties>
             <cv:CapturePropertyAssignment>
               <cv:Property>Fps</cv:Property>
@@ -447,13 +445,31 @@ def process(value):
           <cv:ResizeInterpolation>NearestNeighbor</cv:ResizeInterpolation>
         </Combinator>
       </Expression>
-      <Expression xsi:type="Disable">
-        <Builder xsi:type="Combinator">
-          <Combinator xsi:type="vid:VideoCaptureDevice">
-            <vid:Index>0</vid:Index>
-            <vid:CaptureProperties />
-          </Combinator>
-        </Builder>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="cv:CameraCapture">
+          <cv:Index>0</cv:Index>
+          <cv:CaptureProperties>
+            <cv:CapturePropertyAssignment>
+              <cv:Property>Fps</cv:Property>
+              <cv:Value>30</cv:Value>
+            </cv:CapturePropertyAssignment>
+          </cv:CaptureProperties>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="cv:VideoWriter">
+          <cv:FileName>taking_videos\fly_camera.avi</cv:FileName>
+          <cv:Suffix>Timestamp</cv:Suffix>
+          <cv:Buffered>true</cv:Buffered>
+          <cv:Overwrite>false</cv:Overwrite>
+          <cv:FourCC>FMP4</cv:FourCC>
+          <cv:FrameRate>30</cv:FrameRate>
+          <cv:FrameSize>
+            <cv:Width>640</cv:Width>
+            <cv:Height>480</cv:Height>
+          </cv:FrameSize>
+          <cv:ResizeInterpolation>NearestNeighbor</cv:ResizeInterpolation>
+        </Combinator>
       </Expression>
     </Nodes>
     <Edges>
@@ -467,6 +483,7 @@ def process(value):
       <Edge From="6" To="7" Label="Source1" />
       <Edge From="7" To="8" Label="Source1" />
       <Edge From="10" To="11" Label="Source1" />
+      <Edge From="12" To="13" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
